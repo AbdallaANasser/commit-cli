@@ -1,0 +1,19 @@
+{
+  "name": "commit-cli",
+  "version": "1.0.0",
+  "description": "command line tool to help in formating commit message with the related ticket number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cmd",
+    "commit"
+  ],
+  "author": "Abdalla Abdelnasser",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "simple-git": "^1.111.0"
+  }
+}
