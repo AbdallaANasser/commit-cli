@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 'use strict';
+const program = require('commander');
 const path = require('path');
 const inquirer = require('inquirer');
 const ora = require('ora');
@@ -8,6 +9,11 @@ const ora = require('ora');
 const jira = require('./jira');
 const gitIntegration = require('./git-integration');
 const questions = require('./questions');
+
+program
+    .version('1.1.0')
+    .option('-m, --message <message>', 'commit message')
+    .parse(process.argv);
 
 const getConfig = () => {
     const cwd = process.cwd();
@@ -23,10 +29,19 @@ const getConfig = () => {
     return config;
 };
 
-function getSimpleCommitMessageFlow(config) {
+const getSimpleCommitMessageFlow = async (config) => {
+    let message = program.message;
+    if (!message) {
+        const {commitMsg} = await inquirer.prompt(questions.commitMsgQ);
+        message = commitMsg;
+    }
     const prevTicketQ = questions.generatePrevTicketQ(config);
-    return inquirer.prompt([questions.commitMsgQ, prevTicketQ]);
-}
+    const {usePrev} = await inquirer.prompt(prevTicketQ);
+    return {
+        commitMsg: message,
+        usePrev: usePrev,
+    };
+};
 
 const usePrevUsedTicket = (config, commitMsg) => {
     return gitIntegration.getLatestCommit(config).then((log) => {
