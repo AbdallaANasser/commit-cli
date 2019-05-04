@@ -10,8 +10,9 @@
     "cmd",
     "commit"
   ],
+  "repository": "gitlab.com:AAbdelnasser/commit-cli",
   "author": "Abdalla Abdelnasser",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "chalk": "^2.4.2",
