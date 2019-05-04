@@ -1,27 +1,56 @@
 'use strict';
+const path = require('path');
 const inquirer = require('inquirer');
-const simpleGit = require('simple-git');
+const ora = require('ora');
 
-const qTypes = {
-    input: 'input',
-    confirm: 'confirm',
-    list: 'list',
+const jira = require('./jira');
+const gitIntegration = require('./git-integration');
+const questions = require('./questions');
+
+const getConfig = () => {
+    const cwd = process.cwd();
+    const configPath = path.join(cwd, '.commit-cli.config.json');
+    let config = {};
+    try {
+        config = require(configPath);
+    }
+    catch (e) {
+        throw new Error('No configuration file found');
+    }
+
+    return config;
 };
 
-const commitMsgQ = {
-    type: qTypes.input,
-    name: 'commitMsg',
-    message: 'What\'s the commit message',
+function getSimpleCommitMessageFlow(config) {
+    const prevTicketQ = questions.generatePrevTicketQ(config);
+    return inquirer.prompt([questions.commitMsgQ, prevTicketQ]);
+}
+
+const usePrevUsedTicket = (config, commitMsg) => {
+    return gitIntegration.getLatestCommit(config).then((log) => {
+        const {latestCommit, ticketId} = log;
+        return gitIntegration.commit(commitMsg, ticketId);
+    });
 };
 
-const prevTicketQ = {
-    type: qTypes.confirm,
-    name: 'usePrev',
-    message: (answers) => {
-        const latestCommit = simpleGit().log({'--oneline': null, '-1': null});
-        console.log(latestCommit);
-        return `Do you want to use the prev ticket hash (${latestCommit}) ?`;
-    },
+const useTicketFromList = async (config, commitMsg) => {
+    const spinner = ora({
+        text: 'loading tickets...',
+    }).start();
+    const tickets = await jira.loadCurrentTickets(config);
+    spinner.stop();
+    if (!tickets.length)
+        return console.log("You don't have any tickets to choose one!");
+    const ticketsListQ = questions.generateTicketsListQ(tickets);
+    const {commitTicket} = await inquirer.prompt(ticketsListQ);
+    return await gitIntegration.commit(commitMsg, commitTicket.key);
+
 };
 
-inquirer.prompt(prevTicketQ).then((a) => console.log(a));
+const run = async () => {
+    const config = getConfig();
+    const {commitMsg, usePrev} = await getSimpleCommitMessageFlow(config);
+    return usePrev ? await usePrevUsedTicket(config, commitMsg) : await useTicketFromList(config, commitMsg);
+};
+
+run();
