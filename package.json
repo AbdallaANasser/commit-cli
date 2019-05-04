@@ -1,5 +1,5 @@
 {
-  "name": "commit-cli",
+  "name": "@aabdelnasser/commit-cli",
   "version": "1.0.0",
   "description": "command line tool to help in formating commit message with the related ticket number",
   "main": "index.js",
