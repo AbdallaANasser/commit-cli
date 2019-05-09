@@ -12,7 +12,7 @@
     "cmd",
     "commit"
   ],
-  "repository": "gitlab.com/AAbdelnasser/commit-cli",
+  "repository": "gitlab:AAbdelnasser/commit-cli",
   "author": "Abdalla Abdelnasser",
   "license": "MIT",
   "dependencies": {
