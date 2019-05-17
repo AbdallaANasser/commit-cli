@@ -5,7 +5,7 @@ const getLatestCommit = (config) => {
     return git.log({'--oneline': null, '-1': null})
         .then((logQuery) => {
             const latestCommit = logQuery.latest;
-            const ticketId = latestCommit.hash.match(`${config.projectId}-\\d*`, `ig`);
+            const ticketId = latestCommit.hash.match(config.ticketIdExtractorRe, `ig`);
             return {latestCommit: latestCommit, ticketId: ticketId};
         });
 };

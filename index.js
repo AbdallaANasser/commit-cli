@@ -6,7 +6,7 @@ const path = require('path');
 const inquirer = require('inquirer');
 const ora = require('ora');
 
-const jira = require('./jira');
+const utils = require('./utils');
 const gitIntegration = require('./git-integration');
 const questions = require('./questions');
 
@@ -14,6 +14,11 @@ program
     .version('1.1.0')
     .option('-m, --message <message>', 'commit message')
     .parse(process.argv);
+
+const getTicketingService = (config) => {
+    const ticketingServiceModulePath = path.join(__dirname, config.usedService);
+    return require(ticketingServiceModulePath);
+};
 
 const getConfig = () => {
     const cwd = process.cwd();
@@ -54,13 +59,16 @@ const useTicketFromList = async (config, commitMsg) => {
     const spinner = ora({
         text: 'loading tickets...',
     }).start();
-    const tickets = await jira.loadCurrentTickets(config);
+    const ticketingServiceModule = getTicketingService(config);
+    const tickets = await ticketingServiceModule.loadCurrentTickets(config);
     spinner.stop();
     if (!tickets.length)
         return console.log("You don't have any tickets to choose one!");
     const ticketsListQ = questions.generateTicketsListQ(tickets);
     const {commitTicket} = await inquirer.prompt(ticketsListQ);
-    return await gitIntegration.commit(commitMsg, commitTicket.key);
+    const selectedTicketId = ticketingServiceModule.extractTicketId(commitTicket);
+    const formattedTicketId = utils.ticketIdFormatter(config, selectedTicketId);
+    return await gitIntegration.commit(commitMsg, formattedTicketId);
 
 };
 

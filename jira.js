@@ -1,4 +1,5 @@
 const axios = require('axios');
+const utils = require('./utils');
 
 const loadCurrentTickets = (config) => {
     const jiraConfig = config.jira;
@@ -13,15 +14,20 @@ const loadCurrentTickets = (config) => {
         },
     }).then((res) => {
         return res.data.issues.map((issue) => {
+            const formattedTicket = utils.ticketIdFormatter(config, issue.key);
             return {
-                name: `(${issue.key}) ${issue.fields.summary}`,
+                name: `(${formattedTicket}) ${issue.fields.summary}`,
                 value: issue,
             };
         });
     });
 };
 
+const extractTicketId = (ticket) => {
+    return ticket.key;
+};
 
 module.exports = {
     loadCurrentTickets: loadCurrentTickets,
+    extractTicketId: extractTicketId,
 };
