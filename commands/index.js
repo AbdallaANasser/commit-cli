@@ -6,7 +6,7 @@ const branch = require("./branch");
 
 const run = (config, ticketingService) => {
     const program = new commander.Command();
-    program.version('1.1.0');
+    program.version('3.0.0');
 
     program
         .command("commit <message>").alias("c")

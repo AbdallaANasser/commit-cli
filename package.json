@@ -1,6 +1,6 @@
 {
   "name": "@aabdelnasser/commit-cli",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "command line tool to help in formating commit message with the related ticket number",
   "main": "index.js",
   "bin": "./index.js",
@@ -10,7 +10,9 @@
   },
   "keywords": [
     "cmd",
-    "commit"
+    "commit",
+    "checkout",
+    "git"
   ],
   "repository": "gitlab:AAbdelnasser/commit-cli",
   "author": "Abdalla Abdelnasser",
