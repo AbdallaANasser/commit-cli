@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+'use strict';
 const commands = require('./commands');
 const config_module = require('./config');
 
