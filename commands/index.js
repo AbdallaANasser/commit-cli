@@ -2,6 +2,7 @@
 
 const commander = require('commander');
 const commit = require('./commit');
+const branch = require("./branch");
 
 const run = (config, ticketingService) => {
     const program = new commander.Command();
@@ -15,7 +16,7 @@ const run = (config, ticketingService) => {
     program
         .command("branch <branch>").alias("b")
         .description("open new branch with some-name and the hash of your ticket")
-        .action((branch, cmd) => console.log(`branch is ${branch}`, cmd));
+        .action(branch.run.bind(branch, config, ticketingService));
 
     program.parse(process.argv);
 

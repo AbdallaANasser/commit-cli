@@ -1,7 +1,13 @@
 'use strict';
-const program = require('commander');
+const gitIntegration = require('../git-integration');
+const commonBehaviors = require("../common-behaviors");
 
-program
-    .parse(process.argv);
 
-console.log("inside the branch command");
+const run = async (config, ticketingService, branch, command) => {
+    const {formattedTicketId} = await commonBehaviors.selectTicket(config, ticketingService);
+    return await gitIntegration.checkout(formattedTicketId, branch);
+};
+
+module.exports = {
+    run,
+};

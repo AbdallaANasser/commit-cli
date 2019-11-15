@@ -20,8 +20,14 @@ function commit(commitMsg, ticketId) {
     });
 }
 
+async function checkout(ticketId, name) {
+    const branchName = `${ticketId}-${name}`;
+    return await git.checkout(['-b', branchName]);
+}
+
 
 module.exports = {
-    getLatestCommit: getLatestCommit,
-    commit: commit,
+    getLatestCommit,
+    commit,
+    checkout,
 };
