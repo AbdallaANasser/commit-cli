@@ -14,8 +14,8 @@ const commitMsgQ = {
 
 const ticketsListQ = {
     type: qTypes.list,
-    name: 'commitTicket',
-    message: 'Choose commit\'s ticket',
+    name: 'ticket',
+    message: 'Choose a ticket',
 };
 
 const generatePrevTicketQ = (config) => {
