@@ -8,7 +8,7 @@ Using **`commit-cli`** will allow you to easily create a new branches using the 
 ### Commit Messages
 ![](docs/commits.gif)
 
-##Installation
+## Installation
 
 ```
 npm i -g @aabdelnasser/commit-cli
