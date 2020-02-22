@@ -1,0 +1,643 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: zsh
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/abdalla/projects/my_projects/legacy/commit-cli
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 100
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 10
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: solid
+    title: null
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 42
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 1605
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 8
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 881
+    content: g
+  - delay: 99
+    content: "\bgi"
+  - delay: 53
+    content: t
+  - delay: 56
+    content: ' '
+  - delay: 158
+    content: s
+  - delay: 169
+    content: t
+  - delay: 122
+    content: a
+  - delay: 80
+    content: t
+  - delay: 269
+    content: "us\e[1m \e[0m"
+  - delay: 353
+    content: "\b\e[0m \b\e[?1l\e>\e[?2004l\r\r\n\e]2;git status\a\e]1;git\a"
+  - delay: 7
+    content: "On branch #4-documentaion\r\nChanges not staged for commit:\r\n  (use \"git add <file>...\" to update what will be committed)\r\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\r\n\r\n\t\e[31mmodified:   README.md\e[m\r\n\r\nUntracked files:\r\n  (use \"git add <file>...\" to include in what will be committed)\r\n\r\n\t\e[31mbranching.yml\e[m\r\n\t\e[31mcommit.yml\e[m\r\n\t\e[31mrender1578951261355.gif\e[m\r\n\r\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\r\n\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 29
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 963
+    content: g
+  - delay: 103
+    content: "\bgi"
+  - delay: 35
+    content: t
+  - delay: 108
+    content: ' '
+  - delay: 319
+    content: a
+  - delay: 105
+    content: d
+  - delay: 244
+    content: "d\e[1m \e[0m"
+  - delay: 753
+    content: "\b\e[0m ."
+  - delay: 303
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;git add .\a\e]1;git\a"
+  - delay: 23
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 17
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 534
+    content: c
+  - delay: 104
+    content: "\bco"
+  - delay: 142
+    content: m
+  - delay: 170
+    content: m
+  - delay: 250
+    content: i
+  - delay: 90
+    content: t
+  - delay: 635
+    content: '-'
+  - delay: 108
+    content: c
+  - delay: 156
+    content: l
+  - delay: 748
+    content: i
+  - delay: 930
+    content: ' '
+  - delay: 483
+    content: c
+  - delay: 261
+    content: ' '
+  - delay: 448
+    content: '"'
+  - delay: 167
+    content: '"'
+  - delay: 307
+    content: "\b"
+  - delay: 440
+    content: "a\"\b"
+  - delay: 213
+    content: "d\"\b"
+  - delay: 167
+    content: "d\"\b"
+  - delay: 80
+    content: "e\"\b"
+  - delay: 117
+    content: "d\"\b"
+  - delay: 772
+    content: " \"\b"
+  - delay: 2127
+    content: "b\"\b"
+  - delay: 137
+    content: "r\"\b"
+  - delay: 218
+    content: "a\"\b"
+  - delay: 174
+    content: "n\"\b"
+  - delay: 253
+    content: "c\"\b"
+  - delay: 217
+    content: "h\"\b"
+  - delay: 174
+    content: "i\"\b"
+  - delay: 202
+    content: "n\"\b"
+  - delay: 138
+    content: "g\"\b"
+  - delay: 296
+    content: " \"\b"
+  - delay: 245
+    content: "r\"\b"
+  - delay: 136
+    content: "e\"\b"
+  - delay: 198
+    content: "c\"\b"
+  - delay: 179
+    content: "o\"\b"
+  - delay: 369
+    content: "r\"\b"
+  - delay: 327
+    content: "d\"\b"
+  - delay: 150
+    content: "i\"\b"
+  - delay: 144
+    content: "n\"\b"
+  - delay: 98
+    content: "g\"\b"
+  - delay: 415
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;commit-cli c \"added branching recording\"\a\e]1;commit-cli\a"
+  - delay: 315
+    content: "\e[32m?\e[39m \e[1mDo you want to use the prev ticket hash (null) used in (b0a62d2 add the shebang again after accedi\r\nntely removing it) ?\e[22m\e[0m \e[0m\e[2m(Y/n) \e[22m\e[27D\e[27C"
+  - delay: 1222
+    content: "\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mDo you want to use the prev ticket hash (null) used in (b0a62d2 add the shebang again after accedi\r\nntely removing it) ?\e[22m\e[0m \e[0m\e[2m(Y/n) \e[22mn\e[28D\e[28C"
+  - delay: 450
+    content: "\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mDo you want to use the prev ticket hash (null) used in (b0a62d2 add the shebang again after accedi\r\nntely removing it) ?\e[22m\e[0m \e[0m\e[36mNo\e[39m\e[23D\e[23C\r\n"
+  - delay: 16
+    content: "\e[?25l\e[36m⠋\e[39m loading tickets..."
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠙\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠹\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠼\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠴\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠦\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠧\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠇\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠏\e[39m loading tickets..."
+  - delay: 79
+    content: "\e[2K\e[1G\e[36m⠋\e[39m loading tickets..."
+  - delay: 79
+    content: "\e[2K\e[1G\e[36m⠙\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠹\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠼\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠴\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠦\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠧\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠇\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠏\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠋\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠙\e[39m loading tickets..."
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠹\e[39m loading tickets..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m loading tickets..."
+  - delay: 79
+    content: "\e[2K\e[1G\e[36m⠼\e[39m loading tickets..."
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠴\e[39m loading tickets..."
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠦\e[39m loading tickets..."
+  - delay: 21
+    content: "\e[2K\e[1G\e[?25h"
+  - delay: 12
+    content: "\e[?25l"
+  - delay: 6
+    content: "\e[32m?\e[39m \e[1mChoose a ticket\e[22m\e[0m \e[0m\e[2m(Use arrow keys)\e[22m\r\n\e[36m❯ (#5) As a user I need the app find the config file in the parent levels\e[39m \r\n  (#4) As a user I need more usage info in README file \e[55D\e[55C"
+  - delay: 951
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mChoose a ticket\e[22m\e[0m \e[0m\r\n  (#5) As a user I need the app find the config file in the parent levels \r\n\e[36m❯ (#4) As a user I need more usage info in README file\e[39m \e[55D\e[55C"
+  - delay: 1297
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mChoose a ticket\e[22m\e[0m \e[0m\e[36m(#4) As a user I need more usage info in README file\e[39m\e[70D\e[70C\r\n\e[?25h"
+  - delay: 29
+    content: "commit \"#4 added branching recording\" created successfully!\r\n\e[?25h"
+  - delay: 7
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 12
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m)\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 2984
+    content: 'n'
+  - delay: 83
+    content: "\bna"
+  - delay: 114
+    content: 'n'
+  - delay: 180
+    content: "o\e[1m \e[0m"
+  - delay: 590
+    content: "\b\e[0m R"
+  - delay: 239
+    content: E
+  - delay: 1234
+    content: A
+  - delay: 511
+    content: D
+  - delay: 337
+    content: "ME.md\e[1m \e[0m"
+  - delay: 664
+    content: "\b\e[0m \b\e[?1l\e>\e[?2004l\r\r\n\e]2;nano README.md\a\e]1;nano\a"
+  - delay: 46
+    content: "\e[?1049h\e[1;10r\e(B\e[m\e[4l\e[?7h\e[?1h\e=\e[?1h\e=\e[?1h\e=\e[39;49m\e[?25l\e[39;49m\e(B\e[m\e[H\e[2J\e[8;43H\e(B\e[0;7m[ Reading File ]\r\e[3d\e(B\e[m\e[8;42H\e(B\e[0;7m[ Read 36 lines\r\e[3d\e(B\e[m\e[?12l\e[?25h\e[H\e[39;49m\e(B\e[0;7m  GNU nano 2.5.3                     File: README.md                                                \e[3;1H\e(B\e[m## Prerequisites\r\e[5dyou should add `.commit-cli.config.json` in the root directory of your project,\r\e[6dwhich you are going to use the `commit-cli` on it.\r\e[9d\e(B\e[0;7m^G\e(B\e[m Get Help   \e(B\e[0;7m^O\e(B\e[m Write Out  \e(B\e[0;7m^W\e(B\e[m Where Is   \e(B\e[0;7m^K\e(B\e[m Cut Text   \e(B\e[0;7m^J\e(B\e[m Justify    \e(B\e[0;7m^C\e(B\e[m Cur Pos    \e(B\e[0;7m^Y\e(B\e[m Prev Page\r\e[10d\e(B\e[0;7m^X\e(B\e[m Exit\e[15G\e(B\e[0;7m^R\e(B\e[m Read File  \e(B\e[0;7m^\\\e(B\e[m Replace    \e(B\e[0;7m^U\e(B\e[m Uncut Text \e(B\e[0;7m^T\e(B\e[m To Spell   \e(B\e[0;7m^_\e(B\e[m Go To Line \e(B\e[0;7m^V\e(B\e[m Next Page\r\e[3d"
+  - delay: 1537
+    content: "\e[4d"
+  - delay: 502
+    content: "\e[5d"
+  - delay: 30
+    content: "\e[6d"
+  - delay: 29
+    content: "\e[7d"
+  - delay: 31
+    content: "\e[3dwhich you are going to use the `commit-cli` on it.\r\e[5dAnd here is the sample of this file\e[K\r\e[6d\e[K\e[7d```\r\e[5d"
+  - delay: 30
+    content: "\e[6d"
+  - delay: 31
+    content: "\e[7d"
+  - delay: 32
+    content: "\e[3d\e[K\e[4d```\r\e[5d{\e[K\e[6d \"ticketIdExtractorRe\": \"#\\\\d*\",\r\e[7d  \"ticketIdFormatter\": \"#__COMMIT_CLI_TICKET_ID__\",\r\e[5d"
+  - delay: 28
+    content: "\e[6d"
+  - delay: 31
+    content: "\e[7d"
+  - delay: 31
+    content: "\e7\e[2;7r\e8\e[3S\e[1;10r\e[2;1H\e[K\e[5d  \"usedService\": \"gitlab\",\e[6;3H\"gitlab\": {\e[7;5H\"apiToken\": \"GITLAB-PRIVATE-TOKEN\",\r\e[5d"
+  - delay: 29
+    content: "\e[6d"
+  - delay: 31
+    content: "\e[7d"
+  - delay: 32
+    content: "\e[3;4Hgitlab\": {\e[K\e[4;3H  \"apiToken\": \"GITLAB-PRIVATE-TOKEN\",\e[K\e[5;3H  \"project\": \"AAbdelnasser/commit-cli\",\e[6;3H  \"searchQuery\": \"scope=all&state=opened&label_name[]=in%20progress&label_name[]=review&assignee_$\e[7;3H}\e[K\r\e[5d"
+  - delay: 29
+    content: "\e[6d"
+  - delay: 29
+    content: "\e[7d"
+  - delay: 32
+    content: "\e7\e[2;7r\e8\e[3S\e[1;10r\e[2;1H\e[K\e[5d}\e[6d\b```\r\e[A"
+  - delay: 28
+    content: "\e[6d"
+  - delay: 30
+    content: "\e[7d"
+  - delay: 31
+    content: "\e[3d```\e[K\r\e[4d\e[K\e[5d\e[K\e[7d{\e[5d\b"
+  - delay: 29
+    content: "\e[6d"
+  - delay: 30
+    content: "\e[7d"
+  - delay: 31
+    content: "\e7\e[2;7r\e8\e[3S\e[1;10r\e[5;3H\"ticketIdExtractorRe\": \"META-\\\\d*\",\e[6;3H\"ticketIdFormatter\": \"#__COMMIT_CLI_TICKET_ID__\",\e[7;3H\"usedService\": \"jira\",\r\e[5d"
+  - delay: 30
+    content: "\e[6d"
+  - delay: 31
+    content: "\e[7d"
+  - delay: 32
+    content: "\e7\e[3;8r\e8\e[8d\e[3S\e[1;10r\e[5;3H\"jira\": {\e[K\e[6;5H\"url\": \"https://magalixcorp.atlassian.net\",\e[7;5H\"email\": \"abdallah.nasser@magalix.com\",\r\e[5d"
+  - delay: 31
+    content: "\e[6d"
+  - delay: 30
+    content: "\e[7d"
+  - delay: 31
+    content: "\e7\e[3;8r\e8\e[8d\e[3S\e[1;10r\e[5;5H\"apiToken\": \"JIRA-API-TOKEN\",\e[6;5H\"ticketsJql\": \"project = META AND status in (\\\"In Progress\\\", \\\"Review/Test\\\") AND assignee in $\e[7;3H}\r\e[5d"
+  - delay: 29
+    content: "\e[6d"
+  - delay: 30
+    content: "\e[7d"
+  - delay: 28
+    content: "\e7\e[2;8r\e8\e[8d\e[3S\e[1;10r\e[2;1H\e[K\e[5d}\e[6d\b```\r\e[A"
+  - delay: 35
+    content: "\e[6d"
+  - delay: 24
+    content: "\e[7d"
+  - delay: 31
+    content: "\e7\e[3;8r\e8\e[8d\e[3S\e[1;10r\e[5;1HAdded some info\r"
+  - delay: 30
+    content: "\e[6d"
+  - delay: 1964
+    content: "\e[1;91H\e(B\e[0;7mModified\r\e[6d\e(B\e[mA"
+  - delay: 138
+    content: 'n'
+  - delay: 261
+    content: o
+  - delay: 128
+    content: t
+  - delay: 268
+    content: h
+  - delay: 127
+    content: e
+  - delay: 58
+    content: r
+  - delay: 298
+    content: ' '
+  - delay: 373
+    content: I
+  - delay: 359
+    content: f
+  - delay: 417
+    content: "\b \b"
+  - delay: 234
+    content: 'n'
+  - delay: 151
+    content: f
+  - delay: 339
+    content: o
+  - delay: 300
+    content: ' '
+  - delay: 210
+    content: a
+  - delay: 170
+    content: d
+  - delay: 196
+    content: d
+  - delay: 93
+    content: e
+  - delay: 136
+    content: d
+  - delay: 1115
+    content: "\r\e[8d\e(B\e[0;7mSave modified buffer (ANSWERING \"No\" WILL DESTROY CHANGES) ?                                        \e[9;1H Y\e(B\e[m Yes\e[K\r\e[10d\e(B\e[0;7m N\e(B\e[m No  \e[15G  \e(B\e[0;7m^C\e(B\e[m Cancel\e[K\e[8;62H"
+  - delay: 730
+    content: "\r\e(B\e[0;7mFile Name to Write: README.md                               \r\e[9d^G\e(B\e[m Get Help\e[9;21H\e(B\e[0;7mM-D\e(B\e[m DOS Format\e[41G\e(B\e[0;7mM-A\e(B\e[m Append\e[9;61H\e(B\e[0;7mM-B\e(B\e[m Backup File\r\e[10d\e(B\e[0;7m^C\e(B\e[m Cancel\e[17G    \e(B\e[0;7mM-M\e(B\e[m Mac Format\e[41G\e(B\e[0;7mM-P\e(B\e[m Prepend\e[10;61H\e(B\e[0;7m^T\e(B\e[m To Files\e[8;30H"
+  - delay: 860
+    content: "\e[?25l\e[8;41H\e[39;49m\e(B\e[m\e[1K \e(B\e[0;7m[ Wrote 37 lines ]\e(B\e[m\e[K\e[6;19H\r\e[8d\e[J\e[1;91H\e(B\e[0;7m        \e[10;100H\e(B\e[m\e[10;1H\e[?12l\e[?25h\e[?1049l\r\e[?1l\e>\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 34
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 1319
+    content: g
+  - delay: 123
+    content: "\bgi"
+  - delay: 30
+    content: t
+  - delay: 84
+    content: ' '
+  - delay: 166
+    content: s
+  - delay: 164
+    content: t
+  - delay: 113
+    content: a
+  - delay: 78
+    content: t
+  - delay: 189
+    content: "us\e[1m \e[0m"
+  - delay: 285
+    content: "\b\e[0m \b\e[?1l\e>\e[?2004l\r\r\n\e]2;git status\a\e]1;git\a"
+  - delay: 9
+    content: "On branch #4-documentaion\r\nChanges not staged for commit:\r\n  (use \"git add <file>...\" to update what will be committed)\r\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\r\n\r\n\t\e[31mmodified:   README.md\e[m\r\n\r\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\r\n\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r"
+  - delay: 7
+    content: "\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 47
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 633
+    content: g
+  - delay: 117
+    content: "\bgi"
+  - delay: 34
+    content: t
+  - delay: 79
+    content: ' '
+  - delay: 181
+    content: a
+  - delay: 125
+    content: d
+  - delay: 205
+    content: "d\e[1m \e[0m"
+  - delay: 190
+    content: "\b\e[0m ."
+  - delay: 412
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;git add .\a\e]1;git\a"
+  - delay: 10
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 33
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 586
+    content: c
+  - delay: 111
+    content: "\bco"
+  - delay: 155
+    content: m
+  - delay: 161
+    content: m
+  - delay: 368
+    content: i
+  - delay: 95
+    content: t
+  - delay: 539
+    content: c
+  - delay: 476
+    content: "\b \b"
+  - delay: 236
+    content: '0'
+  - delay: 693
+    content: "\b \b"
+  - delay: 295
+    content: '-'
+  - delay: 433
+    content: c
+  - delay: 148
+    content: l
+  - delay: 194
+    content: i
+  - delay: 159
+    content: "\e[1m \e[0m"
+  - delay: 1021
+    content: "\b\e[0m c"
+  - delay: 300
+    content: ' '
+  - delay: 244
+    content: '"'
+  - delay: 360
+    content: '"'
+  - delay: 401
+    content: "\b"
+  - delay: 429
+    content: "a\"\b"
+  - delay: 223
+    content: "d\"\b"
+  - delay: 165
+    content: "d\"\b"
+  - delay: 109
+    content: "e\"\b"
+  - delay: 480
+    content: "d\"\b"
+  - delay: 193
+    content: " \"\b"
+  - delay: 250
+    content: "a\"\b"
+  - delay: 128
+    content: "n\"\b"
+  - delay: 420
+    content: "t\"\b"
+  - delay: 415
+    content: "\b\" \b\b"
+  - delay: 231
+    content: "o\"\b"
+  - delay: 169
+    content: "t\"\b"
+  - delay: 225
+    content: "h\"\b"
+  - delay: 108
+    content: "e\"\b"
+  - delay: 61
+    content: "r\"\b"
+  - delay: 279
+    content: " \"\b"
+  - delay: 136
+    content: "d\"\b"
+  - delay: 110
+    content: "a\"\b"
+  - delay: 147
+    content: "t\"\b"
+  - delay: 160
+    content: "a\"\b"
+  - delay: 404
+    content: " \"\b"
+  - delay: 601
+    content: "t\"\b"
+  - delay: 100
+    content: "o\"\b"
+  - delay: 110
+    content: " \"\b"
+  - delay: 614
+    content: "t\"\b"
+  - delay: 158
+    content: "h\"\b"
+  - delay: 108
+    content: "e\"\b"
+  - delay: 194
+    content: " \"\b"
+  - delay: 284
+    content: "R\"\b"
+  - delay: 127
+    content: "E\"\b"
+  - delay: 325
+    content: "A\"\b"
+  - delay: 511
+    content: "D\"\b"
+  - delay: 622
+    content: "M\"\b"
+  - delay: 96
+    content: "E\"\b"
+  - delay: 1700
+    content: " \"\b"
+  - delay: 121
+    content: "f\"\b"
+  - delay: 174
+    content: "i\"\b"
+  - delay: 634
+    content: "l\"\b"
+  - delay: 99
+    content: "e\"\b"
+  - delay: 350
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;commit-cli c \"added another data to the README file\"\a\e]1;commit-cli\a"
+  - delay: 327
+    content: "\e[32m?\e[39m \e[1mDo you want to use the prev ticket hash (#4) used in (e44e426 #4 added branching recording) ?\e[22m\e[0m \e[0m\e[2m(Y/n\r\n) \e[22m\e[2D\e[2C"
+  - delay: 1932
+    content: "\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mDo you want to use the prev ticket hash (#4) used in (e44e426 #4 added branching recording) ?\e[22m\e[0m \e[0m\e[36mYes\e[39m\e[99D\e[99C\r\n"
+  - delay: 12
+    content: "commit \"#4 added another data to the README file\" created successfully!\r\n\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                   \r \r\e]2;abdalla@abdalla-Aspire-E5-575G: ~/projects/my_projects/legacy/commit-cli\a\e]1;..cy/commit-cli\a"
+  - delay: 11
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mcommit-cli\e[00m \e[01;34mgit:(\e[31m#4-documentaion\e[34m)\e[00m \e[K\e[?1h\e=\e[?2004h"
+  - delay: 2559
+    content: "\e[?2004l\r\r\n"
