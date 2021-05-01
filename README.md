@@ -24,6 +24,8 @@ Currently `commit-cli` support **Gitlab Issues** and **Atlassian Jira** but you 
 {
   "ticketIdExtractorRe": "#\\d*",
   "ticketIdFormatter": "#__COMMIT_CLI_TICKET_ID__",
+  "commitMessageFormatter": "__COMMIT_CLI_MESSAGE__ [__COMMIT_CLI_TICKET_ID__]",
+  "branchNameFormatter": "abdallahabdelnasser/__COMMIT_CLI_TICKET_ID__/__COMMIT_CLI_BRANCH_NAME__",
   "usedService": "gitlab",
   "gitlab": {
     "apiToken": "******************",
@@ -42,6 +44,8 @@ Currently `commit-cli` support **Gitlab Issues** and **Atlassian Jira** but you 
 {
   "ticketIdExtractorRe": "EX-\\d+",
   "ticketIdFormatter": "__COMMIT_CLI_TICKET_ID__",
+  "commitMessageFormatter": "__COMMIT_CLI_MESSAGE__ [__COMMIT_CLI_TICKET_ID__]",
+  "branchNameFormatter": "abdallahabdelnasser/__COMMIT_CLI_TICKET_ID__/__COMMIT_CLI_BRANCH_NAME__",
   "usedService": "jira",
   "jira": {
     "url": "https://my-domain.atlassian.net",
@@ -52,6 +56,29 @@ Currently `commit-cli` support **Gitlab Issues** and **Atlassian Jira** but you 
 }
 
 ```
+
+
+
+
+### `.commit-cli.config.json` for Clubhouse
+
+```
+{
+  "ticketIdExtractorRe": "ch\\d+",
+  "ticketIdFormatter": "ch__COMMIT_CLI_TICKET_ID__",
+  "commitMessageFormatter": "__COMMIT_CLI_MESSAGE__ [__COMMIT_CLI_TICKET_ID__]",
+  "branchNameFormatter": "abdallahabdelnasser/__COMMIT_CLI_TICKET_ID__/__COMMIT_CLI_BRANCH_NAME__",
+  "usedService": "clubhouse",
+  "clubhouse": {
+    "apiToken": "********************",
+    "query": "owner:abdallahabdelnasser state:\"Ready for Deploy\""
+  }
+}
+
+```
+
+
+
 
 ## Usage
 
