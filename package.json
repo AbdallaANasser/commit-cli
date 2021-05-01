@@ -6,6 +6,9 @@
   "bin": "./index.js",
   "preferGlobal": true,
   "scripts": {
+    "start": "node index.js c something",
+    "commit": "node index.js c something",
+    "branch": "node index.js b something",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

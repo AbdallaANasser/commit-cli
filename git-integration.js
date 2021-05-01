@@ -11,18 +11,16 @@ const getLatestCommit = (config) => {
 };
 
 
-function commit(commitMsg, ticketId) {
-    const commitMessage = `${ticketId} ${commitMsg}`;
-    return git.commit(commitMessage).then((output) => {
+function commit(commitMsg) {
+    return git.commit(commitMsg).then((output) => {
         if(!output.commit)
             return console.log(chalk.red.bold('No commits created!'));
-        console.log(`commit "${commitMessage}" created successfully!`);
+        console.log(`commit "${commitMsg}" created successfully!`);
     });
 }
 
 async function checkout(ticketId, name) {
-    const branchName = `${ticketId}-${name}`;
-    return await git.checkout(['-b', branchName]);
+    return await git.checkout(['-b', name]);
 }
 
 
