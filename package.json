@@ -26,6 +26,6 @@
     "commander": "^2.20.0",
     "inquirer": "^6.3.1",
     "ora": "^3.4.0",
-    "simple-git": "^1.111.0"
+    "simple-git": "^3.3.0"
   }
 }
